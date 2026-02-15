@@ -1,0 +1,16 @@
+// https://zed.dev/docs/key-bindings
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "space enter": "editor::ToggleCodeActions",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space e": "project_panel::ToggleFocus",
+    },
+  },
+]
