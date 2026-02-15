@@ -13,4 +13,18 @@
       "space e": "project_panel::ToggleFocus",
     },
   },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "shift-a": "project_panel::NewDirectory",
+      "c": "project_panel::Copy",
+      "x": "project_panel::Cut",
+      "v": "project_panel::Paste",
+      "d": "project_panel::Delete",
+      "p": "workspace::CopyPath",
+
+      "space enter": "editor::ToggleCodeActions",
+    },
+  },
 ]
