@@ -1,0 +1,119 @@
+// https://zed.dev/docs/reference/all-settings
+{
+  "theme": "Catppuccin Mocha - No Italics",
+  "ui_font_family": "DejaVu Sans",
+  "buffer_font_family": "DejaVu Sans",
+  "ui_font_size": 20.0,
+  "buffer_font_size": 18.0,
+  "agent_ui_font_size": 20.0,
+  "agent_buffer_font_size": 20.0,
+  "buffer_line_height": "standard",
+  "buffer_font_weight": 400.0,
+  "vim_mode": true,
+  "base_keymap": "VSCode",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Material Icon Theme",
+  },
+  "show_completions_on_input": false,
+  "inline_code_actions": false,
+  "auto_update": false,
+  "extend_comment_on_newline": false,
+  "horizontal_scroll_margin": 4,
+  "vertical_scroll_margin": 4,
+  "close_on_file_delete": true,
+
+  "multi_cursor_modifier": "cmd_or_ctrl",
+
+  "agent": {
+    "default_model": {
+      "provider": "openrouter",
+      "model": "arcee-ai/trinity-large-preview:free",
+    },
+    "enabled": true,
+  },
+
+  "title_bar": {
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_branch_name": false,
+  },
+  "toolbar": { "quick_actions": false },
+  "project_panel": {
+    "dock": "right",
+    "default_width": 500,
+    "hide_root": true,
+    "git_status": false,
+  },
+  "file_finder": { "modal_max_width": "medium" },
+  "gutter": { "min_line_number_digits": 3 },
+  "edit_predictions": {
+    "provider": "zed",
+    "mode": "eager",
+    "disabled_globs": [
+      "**/.env*",
+      "**/*.pem",
+      "**/*.key",
+      "**/*.cert",
+      "**/*.crt",
+      "**/.dev.vars",
+      "**/secrets.yml",
+    ],
+  },
+  "git": { "inline_blame": { "enabled": false } },
+  "git_panel": { "tree_view": true },
+
+  "languages": {
+    "Python": {
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+      },
+      "language_servers": ["basedpyright"],
+      "formatter": { "language_server": { "name": "ruff" } },
+      "preferred_line_length": 120,
+      "colorize_brackets": true,
+    },
+  },
+
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "basedpyright.analysis": {
+          "diagnosticSeverityOverrides": {
+            // "error", "warning", "information", "true", "false", "none"
+            "reportExplicitAny": false,
+            "reportAny": false,
+            "reportUnknownParameterType": false,
+            "reportUnknownArgumentType": false,
+            "reportUnknownMemberType": false,
+            "reportUnusedCallResult": false,
+            "reportIncompatibleVariableOverride": false,
+            "reportImplicitOverride": false,
+          },
+          "ignore": ["__pycache__"],
+
+          "typeCheckingMode": "all", // ["off", "basic", "standard", "strict", "recommended", "all"]
+          "diagnosticMode": "workspace",
+          "autoSearchPaths": true,
+          "autoImportCompletions": true,
+          "useLibraryCodeForTypes": true,
+          "inlayHints": {
+            "variableTypes": true,
+            "functionReturnTypes": true,
+            "callArgumentNames": true,
+          },
+        },
+      },
+    },
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lint": {
+            "ignore": ["all"],
+          },
+        },
+      },
+    },
+  },
+}
