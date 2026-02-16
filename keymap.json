@@ -4,6 +4,7 @@
     "context": "Editor",
     "bindings": {
       "space enter": "editor::ToggleCodeActions",
+      // "ctrl-s": "file::Save",
     },
   },
   {
@@ -14,7 +15,7 @@
     },
   },
   {
-    "context": "ProjectPanel",
+    "context": "ProjectPanel && not_editing",
     "bindings": {
       "a": "project_panel::NewFile",
       "shift-a": "project_panel::NewDirectory",
