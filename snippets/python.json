@@ -1,0 +1,36 @@
+{
+  "Main check": {
+    "prefix": "ifmain",
+    "body": [
+      "def main() -> None:",
+      "    pass$0",
+      "\n",
+      "if __name__ == \"__main__\":",
+      "    main()"
+    ],
+    "description": "Python __main__ entrypoint"
+  },
+  "Async Main check": {
+    "prefix": "aifmain",
+    "body": [
+      "async def main() -> None:",
+      "    pass$0",
+      "\n",
+      "if __name__ == \"__main__\":",
+      "    import asyncio",
+      "    asyncio.run(main())"
+    ],
+    "description": "Python __main__ entrypoint"
+  },
+
+  "Try Except": {
+    "prefix": "tryexcept",
+    "body": [
+      "try:",
+      "    ${1:pass}",
+      "except ${2:Exception} as ${3:e}:",
+      "    raise ${3:e}"
+    ],
+    "description": "Try/except block"
+  }
+}
