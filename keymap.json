@@ -8,7 +8,7 @@
     },
   },
   {
-    "context": "Workspace",
+    "context": "Workspace && not_editing",
     "bindings": {
       "space f f": "file_finder::Toggle",
       "space e": "project_panel::ToggleFocus",
