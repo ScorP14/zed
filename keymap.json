@@ -8,7 +8,7 @@
     },
   },
   {
-    "context": "Workspace && not_editing",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
       "space f f": "file_finder::Toggle",
       "space e": "project_panel::ToggleFocus",
@@ -17,6 +17,7 @@
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
+      "space e": "project_panel::ToggleFocus",
       "a": "project_panel::NewFile",
       "shift-a": "project_panel::NewDirectory",
       "c": "project_panel::Copy",
